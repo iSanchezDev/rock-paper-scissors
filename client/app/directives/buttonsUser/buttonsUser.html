@@ -1,0 +1,26 @@
+<button class="btn btn-default option hvr-glow"
+        ng-click="onUserSelect('rock')"
+        ng-disabled="gameStop"
+        ng-class="{'btn-primary' : userOption=='rock'}">
+      <span class="hvr-rotate">
+        <i class="fa fa-hand-rock-o fa-5x fa-rotate-90"></i>
+      </span>
+</button>
+
+<button class="btn btn-default option hvr-glow"
+        ng-click="onUserSelect('paper')"
+        ng-disabled="gameStop"
+        ng-class="{'btn-success' : userOption=='paper'}">
+        <span class="hvr-rotate">
+          <i class="fa fa-hand-paper-o fa-5x fa-rotate-90"></i>
+        </span>
+</button>
+
+<button class="btn btn-default option hvr-glow"
+        ng-click="onUserSelect('scissors')"
+        ng-disabled="gameStop"
+        ng-class="{'btn-warning' : userOption=='scissors'}">
+      <span class="hvr-rotate">
+        <i class="fa fa-hand-scissors-o fa-5x fa-flip-horizontal"></i>
+      </span>
+</button>

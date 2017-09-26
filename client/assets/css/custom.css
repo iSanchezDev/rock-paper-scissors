@@ -1,0 +1,83 @@
+.main-box {
+  width: 615px !important;
+  margin: 20px auto !important;
+}
+
+.title {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 17px;
+}
+
+.option {
+  width: 150px;
+  height: 150px;
+}
+
+.text-result {
+  text-align: center;
+}
+
+.score {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 33px;
+  background: rgb(245, 209, 209);
+}
+
+.historical {
+  height: 514px;
+  overflow: auto;
+  border: 14px solid #d2d2d2;
+  width: 385px;
+  margin: auto auto;
+  background-color: #dedede;
+}
+
+.item-historical {
+  margin-left: 40px;
+  list-style-type: none;
+}
+
+.result {
+  padding: 35px 0px;
+  background-color: #FFF;
+}
+
+.message {
+  height: 30px;
+  text-align: center;
+}
+
+/* Icons */
+
+/* unavailable on font-awesome*/
+.fa-flip-horizontal-rotate90 {
+  -ms-transform: scale(-1, 1) rotate(90deg) ; /* IE 9 */
+  -webkit-transform: scale(-1, 1) rotate(90deg); /* Chrome, Safari, Opera */
+  transform: scale(-1, 1) rotate(90deg);
+}
+
+.lives i.fa-heart {
+  color: #d9534f;
+  font-size: 15px;
+}
+
+.lives i.fa-heart-o {
+  color: #d9534f;
+  font-size: 15px;
+}
+
+.trophy i.fa-trophy {
+  color: #d4df1f;
+  font-size: 40px;
+}
+
+.badge-warning {
+  background-color: #f89406 !important;
+}
+.badge-success {
+  background-color: #468847 !important;
+}

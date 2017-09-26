@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <title>Rock, paper or scissors</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/hover/css/hover-min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
+
+  <!-- JS libs -->
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- App and Controllers-->
+  <script src="app/app.js"></script>
+  <script src="app/controllers/mainController.js"></script>
+
+  <!-- Helpers -->
+  <script src="app/filters/commonFilters.js"></script>
+  <script src="app/constant/gameConfig.js"></script>
+  <script src="app/services/commonServices.js"></script>
+
+  <!-- Directives -->
+  <script src="app/directives/scores/scores.js"></script>
+  <script src="app/directives/lives/lives.js"></script>
+  <script src="app/directives/trophies/trophies.js"></script>
+  <script src="app/directives/buttonsUser/buttonsUser.js"></script>
+  <script src="app/directives/buttonsMachine/buttonsMachine.js"></script>
+</head>
+
+<body ng-app="appTest" ng-controller="MainController">
+
+  <div class="main-box">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <span style="title">Rock - Paper - Scissors</span>
+        <button class="btn btn-xs btn-default pull-right"
+                ng-show="historical.length >= 1"
+                ng-click="historicalView=!historicalView">Scores
+        </button>
+      </div>
+
+      <div class="panel-body">
+        <div class="col-md-12">
+
+          <!-- Game -->
+          <div ng-hide="historicalView">
+            <!-- User Box -->
+            <div class="col-md-4 animated pulse">
+              <h4 class="text-center">User</h4>
+
+              <buttons-user></buttons-user>
+
+              <lives amount="machineScore"></lives>
+              <trophies trophies="trophiesUser"></trophies>
+            </div>
+
+            <scores></scores>
+
+            <!-- Machine Box -->
+            <div class="col-md-4 animated pulse">
+              <h4 class="text-center">Machine</h4>
+
+              <buttons-machine></buttons-machine>
+
+              <lives amount="userScore"></lives>
+              <trophies trophies="trophiesMachine"></trophies>
+            </div>
+          </div>
+
+          <!-- Historical  -->
+          <div ng-show="historicalView" class="historical animated swing">
+            <ul ng-repeat="item in historical">
+                <h4>Game: {{$index+1}}</h4>
+                <li class="item-historical">User: <span class="badge badge-success">{{item.user}}</span></label></li>
+                <li class="item-historical">Machine: <span class="badge badge-warning">{{item.machine}}</span></li>
+                <li class="item-historical"><i ng-show="item.perfect" class="fa fa-trophy"></i></li>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+      <!-- Tablet and Mobile no suported -->
+      <!-- <div class="panel-body visible-sm visible-xs">
+        <h4>Sorry but the game is not available for tablet and mobile</h4>
+      </div> -->
+    </div>
+  </div>
+</body>
+
+</html>
