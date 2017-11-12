@@ -3,12 +3,12 @@
 ### Description
 Rock, paper and scissors is the common game which allows you play with your browser. The purpose is to show you how to create a simple web game with AngularJS and some animations libraries.
 
-#### How to start:
+### How to start:
   1. When the app starts you can play instantly
   2. As user player click in your buttons
   3. The machine randomly will give you an answer
 
-#### Game:
+### Game:
   1. By default, each player has eight lives.
   2. A play means eight lives
   3. You can earn trophies doing perfect plays
@@ -49,6 +49,9 @@ Rock, paper and scissors is the common game which allows you play with your brow
 
       1. Infinite: Plays = 0 and maxTrophies = 0.
       2. Earning trophies: Plays = 3 and maxTrophies = 10.
+
+### Screenshot
+![screen shot 2017-11-12 at 21 46 51](https://user-images.githubusercontent.com/25980900/32703255-4e2abab4-c7f3-11e7-8c0c-021664003a5c.png)
 
 ### Technologies
   - Node
