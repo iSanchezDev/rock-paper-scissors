@@ -1,7 +1,7 @@
 # Rock, paper and scissors
 
 ### Description
-Rock, paper and scissors is the common game which will allows you play with your browser. The purpose is to show you how to design a simple web game with javaScript code and some animations libraries.
+Rock, paper and scissors is the common game which allows you play with your browser. The purpose is to show you how to create a simple web game with AngularJS and some animations libraries.
 
 #### How to start:
   1. When the app starts you can play instantly
